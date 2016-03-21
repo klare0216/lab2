@@ -1,6 +1,4 @@
 #include "BMI.h"
-#include <iomanip>
-#include <limits>
 
 BMI::BMI()
 {
@@ -15,14 +13,14 @@ BMI::BMI(float h,float m)
   setMass(m);
   getBMI();
 }
-
+//將不合法的height設為1.0避免之後有除以零的情況
 void BMI::setHeight(float h)
 {
   if (h <= 0)
   {
     height = 1.0;
   }else {
-    height = h/100;
+    height = h/100; //將身高換算成公尺
   }
 }
 
@@ -43,7 +41,7 @@ float BMI::getBMI()
 
 string BMI::getCategory()
 {
-  getBMI();
+  getBMI(); //避免getBMI()沒先被執行
   if (bmi < 15.0) return "Very severely underweight";
   else if (bmi >= 15.0 && bmi < 16.0) return "Severely underweight";
   else if (bmi >= 16.0 && bmi < 18.5) return "Underweight";

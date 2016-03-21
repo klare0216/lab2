@@ -7,7 +7,8 @@ int main()
 {
   float temp_height = 0, temp_mass = 0;
   BMI bmi;
-
+  
+  //判定file.in及file.out能否開啟
   ifstream inFile("file.in",ios::in);
   if(!inFile)
   {
@@ -20,7 +21,8 @@ int main()
     cout << "file.out open failure." << endl;
     return 0;
   }
-  
+
+  //從file.in存取資料使用bmi來得到結果並輸出至file.out, 直到讀到的值為0
   while(1)
   {
     inFile >> temp_height >> temp_mass;
