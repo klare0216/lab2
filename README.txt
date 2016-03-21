@@ -13,12 +13,11 @@
       Description:
 
         此程式可以將file.in內的身高體重資料換算成BMI值以及其肥胖程度的描述, 
-        並輸出成file.out檔案。在這次作業裡有使用到之前沒學過得cout的格式化輸出,
-        和以前C使用printf()的格式化輸出的方法非常不同。
+        並輸出成file.out檔案。在這次作業裡有使用到之前沒學過得cout的格式化輸出。
 
         <main.cpp>
-            讀入file.in, 藉由BMI的public function做處理
-            得到BMI值以及對應的Category, 再格式化寫入file.out。
+            讀入file.in, 藉由BMI的member function做處理
+            得到bmi值以及對應的Category, 再格式化寫入file.out。
         
         <BMI.cpp>
             使用setHeight(),setMass()將需要的值存入, 再使用getBMI()得到其BMI的值。
