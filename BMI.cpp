@@ -1,4 +1,6 @@
 #include "BMI.h"
+#include <iomanip>
+#include <limits>
 
 BMI::BMI()
 {
@@ -18,10 +20,9 @@ void BMI::setHeight(float h)
 {
   if (h <= 0)
   {
-    cout << "input height error" << endl;
     height = 1.0;
   }else {
-    height = h;
+    height = h/100;
   }
 }
 
@@ -29,7 +30,6 @@ void BMI::setMass(float m)
 {
   if (m <= 0)
   {
-    cout << "input mass error" << endl;
     mass = 1.0;
   }else {
     mass = m;
